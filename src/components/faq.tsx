@@ -26,7 +26,7 @@ const faqs = [
 
 export function FAQ() {
     return (
-        <section className="container px-4 py-16 bg-white text-gray-800">
+        <section className="container mx-auto px-4 py-16 bg-white text-gray-800">
             <h2 className="mb-8 text-center text-2xl font-bold md:text-3xl">
                 Frequently asked questions
             </h2>
@@ -47,4 +47,3 @@ export function FAQ() {
         </section>
     )
 }
-
