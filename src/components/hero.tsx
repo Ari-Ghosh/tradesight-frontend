@@ -3,11 +3,9 @@ import { SiAdobe } from "react-icons/si";
 import { SiNotion } from "react-icons/si";
 import { FaGithub } from "react-icons/fa";
 
-
-
 export function Hero() {
     return (
-        <section className="container px-4 pt-32 pb-16 md:pt-40 md:pb-24">
+        <section className="container mx-auto px-4 pt-32 pb-16 md:pt-40 md:pb-24">
             <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">
                     Make Better Investment Decisions With Alternative Data
@@ -19,7 +17,7 @@ export function Hero() {
                     Get Started
                 </Button>
             </div>
-            <div className="mt-16 grid grid-cols-3 gap-4 md:gap-8">
+            <div className="mt-16 grid grid-cols-3 gap-4 md:gap-8 mx-auto">
                 <div className="flex items-center gap-3 rounded-lg border p-4">
                     {/* <img src="/placeholder.svg" alt="Adobe" width={24} height={24} className="h-6 w-6" /> */}
                     <SiAdobe />
@@ -48,4 +46,3 @@ export function Hero() {
         </section>
     )
 }
-

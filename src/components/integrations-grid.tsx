@@ -29,14 +29,14 @@ const integrations: { name: string; logo: IconKey; change: string }[] = [
 
 export function IntegrationsGrid() {
     return (
-        <section className="container px-4 py-16">
+        <section className="container mx-auto px-4 py-16">
             <h2 className="mb-6 text-center text-2xl font-bold md:text-3xl">
                 Get Impactful Stock Alerts
             </h2>
             <p className="mx-auto mb-12 max-w-[600px] text-center text-muted-foreground">
                 Stay updated with real-time alerts and notifications about your investment portfolio
             </p>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 mx-auto">
                 {integrations.map((integration) => {
                     const IconComponent = iconMapping[integration.logo];
                     return (

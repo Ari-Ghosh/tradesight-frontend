@@ -1,7 +1,7 @@
 export function Footer() {
     return (
         <footer className="border-t">
-            <div className="container px-4 py-8">
+            <div className="container mx-auto px-4 py-8">
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                     <div>
                         <h3 className="mb-4 text-sm font-semibold">Product</h3>
@@ -113,4 +113,3 @@ export function Footer() {
         </footer>
     )
 }
-

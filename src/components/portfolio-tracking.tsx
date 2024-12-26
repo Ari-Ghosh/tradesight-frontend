@@ -21,8 +21,8 @@ const portfolioItems: { name: string; logo: IconKey; value: string; change: stri
 
 export function PortfolioTracking() {
     return (
-        <section className="container px-4 py-16">
-            <div className="grid gap-16 md:grid-cols-2 md:gap-12">
+        <section className="container mx-auto px-4 py-16">
+            <div className="grid gap-16 md:grid-cols-1 md:gap-12">
                 <div>
                     <h2 className="mb-6 text-2xl font-bold md:text-3xl">
                         Track your portfolio
@@ -62,7 +62,7 @@ export function PortfolioTracking() {
                         View Portfolio
                     </Button>
                 </div>
-                <div className="relative">
+                {/* <div className="relative">
                     <img
                         src="/placeholder.svg"
                         alt="Portfolio tracking illustration"
@@ -70,7 +70,7 @@ export function PortfolioTracking() {
                         height={400}
                         className="rounded-lg"
                     />
-                </div>
+                </div> */}
             </div>
         </section>
     );

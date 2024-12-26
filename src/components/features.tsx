@@ -35,11 +35,11 @@ const features = [
 
 export function Features() {
     return (
-        <section className="container px-4 py-16 md:py-24">
+        <section className="container mx-auto px-4 py-16 md:py-24">
             <h2 className="mb-12 text-center text-2xl font-bold md:text-3xl">
                 Monitor Company Performance
             </h2>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mx-auto">
                 {features.map((feature) => (
                     <div
                         key={feature.title}
@@ -54,4 +54,3 @@ export function Features() {
         </section>
     )
 }
-
