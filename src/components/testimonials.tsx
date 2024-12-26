@@ -1,4 +1,5 @@
-import { Star } from 'lucide-react'
+import { Star } from 'lucide-react';
+import { FaUserCircle } from 'react-icons/fa';
 
 const testimonials = [
     {
@@ -19,7 +20,7 @@ const testimonials = [
         company: "Self-employed",
         rating: 4,
     },
-]
+];
 
 export function Testimonials() {
     return (
@@ -30,7 +31,7 @@ export function Testimonials() {
             <div className="grid gap-8 md:grid-cols-3">
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="rounded-lg border p-6">
-                        <div className="mb-4 flex">
+                        <div className="mb-4 flex justify-center">
                             {Array.from({ length: testimonial.rating }).map((_, i) => (
                                 <Star
                                     key={i}
@@ -38,24 +39,17 @@ export function Testimonials() {
                                 />
                             ))}
                         </div>
-                        <p className="mb-4 text-sm text-muted-foreground">{testimonial.text}</p>
-                        <div className="flex items-center">
-                            <img
-                                src="/placeholder.svg"
-                                alt={testimonial.author}
-                                width={40}
-                                height={40}
-                                className="h-10 w-10 rounded-full"
-                            />
-                            <div className="ml-3">
-                                <p className="font-medium">{testimonial.author}</p>
-                                <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-                            </div>
+                        <div className="flex flex-col items-center mb-4">
+                            <FaUserCircle className="text-gray-400 h-16 w-16" />
+                        </div>
+                        <p className="mb-4 text-sm text-muted-foreground text-center">{testimonial.text}</p>
+                        <div className="text-center">
+                            <p className="font-medium">{testimonial.author}</p>
+                            <p className="text-sm text-muted-foreground">{testimonial.company}</p>
                         </div>
                     </div>
                 ))}
             </div>
         </section>
-    )
+    );
 }
-
