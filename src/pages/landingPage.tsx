@@ -18,7 +18,7 @@ export default function LandingPage() {
         <Features />
         <PortfolioTracking />
         <Testimonials />
-        <section className="container px-4 py-16 text-center">
+        <section className="container mx-auto px-4 py-16 text-center">
           <h2 className="mb-6 text-2xl font-bold md:text-3xl">
             Ready to give it a go?
           </h2>
