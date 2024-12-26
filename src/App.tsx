@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Header } from "@/components/header"
+import { Hero } from "@/components/hero"
+import { IntegrationsGrid } from "@/components/integrations-grid"
+import { Features } from "@/components/features"
+import { PortfolioTracking } from "@/components/portfolio-tracking"
+import { Testimonials } from "@/components/testimonials"
+import { FAQ } from "@/components/faq"
+import { Footer } from "@/components/footer"
+import { Button } from "@/components/ui/button"
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function Home() {
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main>
+        <Hero />
+        <IntegrationsGrid />
+        <Features />
+        <PortfolioTracking />
+        <Testimonials />
+        <section className="container px-4 py-16 text-center">
+          <h2 className="mb-6 text-2xl font-bold md:text-3xl">
+            Ready to give it a go?
+          </h2>
+          <Button size="lg" className="bg-[#0066FF] hover:bg-[#0052CC] h-12 px-8">
+            Get Started Now
+          </Button>
+        </section>
+        <FAQ />
+      </main>
+      <Footer />
     </>
   )
 }
-
-export default App
