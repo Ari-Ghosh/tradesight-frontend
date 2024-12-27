@@ -22,7 +22,7 @@ export function Sidebar() {
     <div className="w-64 bg-white border-r h-screen p-4">
       <div className="flex items-center gap-2 mb-8">
         <AiOutlineStock className="w-8 h-8 bg-red-500 rounded-lg p-2 text-white" />
-        <span className="text-xl font-bold text-black">Extej</span>
+        <span className="text-xl font-bold text-black">Trade Sight</span>
       </div>
       
       <div className="space-y-2">
