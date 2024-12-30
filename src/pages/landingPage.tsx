@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
-import { IntegrationsGrid } from "@/components/integrations-grid";
+import { StockPerformers } from "@/components/integrations-grid";
 import { Features } from "@/components/features";
 import { PortfolioTracking } from "@/components/portfolio-tracking";
 import { Testimonials } from "@/components/testimonials";
@@ -14,7 +14,7 @@ export default function LandingPage() {
       <Header />
       <main>
         <Hero />
-        <IntegrationsGrid />
+        <StockPerformers />
         <Features />
         <PortfolioTracking />
         <Testimonials />

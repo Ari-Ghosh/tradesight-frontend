@@ -106,7 +106,7 @@ export function Footer() {
                 </div>
                 <div className="mt-8 border-t pt-8">
                     <p className="text-center text-sm text-muted-foreground">
-                        © 2024 Peekio. All rights reserved.
+                        © 2024 Trade Sight. All rights reserved.
                     </p>
                 </div>
             </div>
