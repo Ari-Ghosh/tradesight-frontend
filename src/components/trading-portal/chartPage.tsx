@@ -1,7 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
+import CompanyDetails from './companyDetails';
+import PriceDetails from './PriceDetails';
 
 declare global {
   interface Window {
@@ -11,6 +13,7 @@ declare global {
 
 export function ChartPage() {
   const { symbol } = useParams<{ symbol: string }>();
+  const [formattedSymbol,setFormattedSymbol]=useState('')
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -19,7 +22,7 @@ export function ChartPage() {
     script.async = true;
     script.onload = () => {
       if (containerRef.current && symbol) {
-        const formattedSymbol = symbol.replace('.NS', '').toLowerCase();
+        setFormattedSymbol(symbol.replace('.NS', '').toLowerCase())
 
         new window.TradingView.widget({
           autosize: true,
@@ -58,9 +61,19 @@ export function ChartPage() {
       <Sidebar />
       <div className="flex flex-col flex-1">
         <Header />
-        <main className="flex-1 mx-10">
+        <main className="flex-1 mx-10 overflow-y-auto max-h-[calc(100vh-100px)]">
           <h1 className="text-3xl font-bold mb-6 mt-5">{displaySymbol} Stock Details</h1>
-          <div id="tradingview_widget" ref={containerRef} className="w-full h-[calc(100vh-200px)]" />
+            <div id="tradingview_widget" ref={containerRef} className="w-full h-[calc(100vh-200px)]" />
+            {formattedSymbol && (
+              <>
+              <div className="mt-6">
+                <PriceDetails companyName={formattedSymbol} />
+              </div>
+              <div className="mt-6">
+                <CompanyDetails companyName={formattedSymbol} />
+              </div>
+              </>
+            )}
         </main>
       </div>
     </div>
