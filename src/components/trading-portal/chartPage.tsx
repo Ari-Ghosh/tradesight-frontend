@@ -4,6 +4,7 @@ import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 import CompanyDetails from './companyDetails';
 import PriceDetails from './PriceDetails';
+import InvestorsDetails from './InvestorsDetails';
 
 declare global {
   interface Window {
@@ -61,7 +62,7 @@ export function ChartPage() {
       <Sidebar />
       <div className="flex flex-col flex-1">
         <Header />
-        <main className="flex-1 mx-10 overflow-y-auto max-h-[calc(100vh-100px)]">
+        <main className="flex-1 mx-10 overflow-y-auto max-h-[calc(100vh-100px)] scrollbar-thin scrollbar-thumb-blue-500 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-gray-200">
           <h1 className="text-3xl font-bold mb-6 mt-5">{displaySymbol} Stock Details</h1>
             <div id="tradingview_widget" ref={containerRef} className="w-full h-[calc(100vh-200px)]" />
             {formattedSymbol && (
@@ -71,6 +72,9 @@ export function ChartPage() {
               </div>
               <div className="mt-6">
                 <CompanyDetails companyName={formattedSymbol} />
+              </div>
+              <div className="mt-6">
+                <InvestorsDetails companyName={formattedSymbol} />
               </div>
               </>
             )}
