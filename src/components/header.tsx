@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button"
+import DarkMode from "./DarkMode"
+
 
 export function Header() {
     return (
+        
         <header className="fixed top-0 left-0 right-0 z-50 border-b bg-white flex justify-center mx-auto w-full">
+            
             <div className="container flex h-16 items-center justify-between px-4">
                 <div className="flex items-center gap-6">
                     <a href="/" className="flex items-center">
@@ -34,7 +38,11 @@ export function Header() {
                         </a>
                     </nav>
                 </div>
+               
                 <div className="flex items-center gap-4">
+                
+                    <DarkMode />
+                
                     <Button variant="ghost" className="bg-blue-300 hidden md:inline-flex">
                         Log in
                     </Button>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Bell, Search } from 'lucide-react';
 import { FaUserCircle } from "react-icons/fa";
 import useDebounce from '../../hooks/useDebounce';
+import DarkMode from '../DarkMode';
 
 interface Suggestion {
   name: string;
@@ -110,11 +111,13 @@ export function Header() {
 
       {/* Notifications and Profile */}
       <div className="flex items-center gap-4">
+       
         {/* Notification Bell */}
         <button className="p-2 hover:bg-white/20 rounded-full focus:outline-none focus:ring-2 focus:ring-purple-300">
           <Bell className="w-5 h-5 text-gray-600" />
         </button>
-
+         {/*dark mode toggle*/}
+          <DarkMode />
         {/* Profile Section */}
         <div className="flex items-center gap-3">
           <FaUserCircle className="text-gray-400 h-16 w-16" />

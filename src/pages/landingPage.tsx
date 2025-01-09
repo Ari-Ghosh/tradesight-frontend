@@ -7,10 +7,12 @@ import { Testimonials } from "@/components/testimonials";
 import { FAQ } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import ThemeInitializer from "@/components/ThemeInitializer"
 
 export default function LandingPage() {
   return (
     <>
+     
       <Header />
       <main>
         <Hero />

@@ -1,7 +1,7 @@
 import { Sidebar } from '../components/trading-portal/Sidebar'
 import { Header } from '../components/trading-portal/Header'
 import { PositionsTable } from '../components/trading-portal/PositionsTable'
-
+import ThemeInitializer from '@/components/ThemeInitializer';
 const mockPositions = [
   {
     pair: 'Apple Inc. - AAPL',
@@ -111,6 +111,7 @@ const mockOrders = [
 function App() {
   return (
     <div className="flex h-screen bg-gray-50">
+      
       <Sidebar />
       <div className="flex-1 flex flex-col">
         <Header />
