@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+## Algo Trade
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Your very own Paper Trading & Stock Analysis for the Indian Stock Market
 
-Currently, two official plugins are available:
+Algo Trade is a powerful web application designed to empower Indian stock market enthusiasts with a comprehensive paper trading and analysis platform. Practice your trading strategies in a risk-free environment with access to live data for over 2000+ stocks listed on the National Stock Exchange.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Key Features:
 
-## Expanding the ESLint configuration
+- **Live Data:** Make informed decisions with real-time market updates for a vast selection of Indian stocks.
+  ![Dashboard](public/Dashboard.jpg)
+- **Paper Trading:** Simulate real-world trading without risking capital. Track your performance and refine your strategies before investing your hard-earned money.
+  ![Scrip Page](public/StockPage.jpg)
+- **Charting:** Get access to historical data for Scrips in interactive and user friendly charts.
+- **Top Movers:** Get access to the Top Market Movers data for your analysis.
+  ![Watchlist](public/TopGainers.jpg)
+- **Portfolio Management:** Build and customize your own virtual portfolios, track your paper trades, and monitor your overall performance.
+  ![Portfolio](public/Portfolio.jpg)
+- **Watchlists:** Stay on top of your favorite stocks by creating watchlists.
+  ![Watchlist](public/Watchlist.jpg)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Benefits:
 
-- Configure the top-level `parserOptions` property like this:
+- **Risk-Free Learning:** Hone your trading skills in a safe environment. Learn from your mistakes without incurring financial losses.
+- **Improved Decision Making:** Gain valuable experience and confidence before entering the live market.
+- **Market Research & Analysis:** Analyze historical data, identify trends, and discover new investment opportunities.
+- **Track Your Progress:** Monitor your paper trading performance and refine your strategies for long-term success.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Techstack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+> **Built using NextJS for the frontend and Hono for the backend, all hosted on Cloudflare Pages and Workers utilizing D1 and KV.**
